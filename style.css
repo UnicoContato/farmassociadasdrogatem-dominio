@@ -439,7 +439,7 @@ h3 {
 
 .contact-band {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.85fr);
   align-items: center;
   gap: 30px;
   padding: clamp(42px, 6vw, 72px) clamp(18px, 5vw, 70px);
@@ -461,9 +461,24 @@ h3 {
 }
 
 .contact-actions {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 12px;
-  min-width: 230px;
+  margin-top: 26px;
+}
+
+.contact-map {
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.16);
+  box-shadow: var(--shadow);
+}
+
+.contact-map iframe {
+  display: block;
+  width: 100%;
+  min-height: 360px;
+  border: 0;
 }
 
 .site-footer {
@@ -629,6 +644,10 @@ h3 {
 
   .contact-actions {
     width: 100%;
+  }
+
+  .contact-map iframe {
+    min-height: 320px;
   }
 
   .gallery-grid {
